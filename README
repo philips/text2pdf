@@ -1,0 +1,37 @@
+I did not write this code. I brought it into a git repo because it is
+easier than wget'ting the files every time I need them from the author's
+page:
+
+   http://www.eprg.org/pdfcorner/text2pdf/
+
+text2pdf [options] [filename]
+
+  text2pdf makes a 7-bit clean PDF file (version 1.1) from any input file.
+  It reads from standard input or a named file, and writes the PDF file
+  to standard output.
+
+  There are various options as follows:
+
+  -h		show this message
+  -f<font>	use PostScript <font> (must be in standard 14, default: Courier)
+  -I		use ISOLatin1Encoding
+  -s<size>	use font at given pointsize (default 10)
+  -v<dist>	use given line spacing (default 12 points)
+  -l<lines>	lines per page (default 60, determined automatically
+		if unspecified)
+  -c<chars>	maximum characters per line (default 80)
+  -t<spaces>	spaces per tab character (default 8)
+  -F		ignore formfeed characters (^L)
+  -A4		use A4 paper (default Letter)
+  -A3		use A3 paper (default Letter)
+  -x<width>	independent paper width in points
+  -y<height>	independent paper height in points
+  -2		format in 2 columns
+  -L		landscape mode
+
+  Note that where one variable is implied by two options, the second option
+  takes precedence for that variable. (e.g. -A4 -y500)
+  In landscape mode, page width and height are simply swapped over before
+  formatting, no matter how or when they were defined.
+
+text2pdf v1.1 (c) Phil Smith, 1996

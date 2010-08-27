@@ -1,0 +1,90 @@
+.TH TEXT2PDF 1 "V1.1, 02/97" "Local command"
+.SH NAME
+text2pdf \- traduction d'un fichier texte en un fichier Acrobat PDF
+
+.SH SYNOPSIS
+.B text2pdf 
+[-options] [filename]
+
+.SH DESCRIPTION
+
+.B text2pdf 
+makes a 7-bit clean PDF file (version 1.1) from any input file.
+It reads from standard input or a named file, and writes the PDF file
+to standard output.
+
+.SH OPTIONS
+
+There are various options as follows:
+
+.TP 1i
+.B  -h
+show this message
+.TP
+.B  -f<font>
+use PostScript <font> (must be in standard 14, default: Courier)
+.TP
+.B  -I
+use ISOLatin1Encoding (default)
+.TP
+.B  -s<size>
+use font at given pointsize (default 10)
+.TP
+.B  -v<dist>
+use given line spacing (default 12 points)
+.TP
+.B  -l<lines>
+lines per page (default 60, determined automatically if unspecified)
+.TP
+.B  -c<chars>
+maximum characters per line (default 80)
+.TP
+.B  -t<spaces>
+spaces per tab character (default 8)
+.TP
+.B  -F
+ignore formfeed characters (^L)
+.TP
+.B  -A4
+use A4 paper (default)
+.TP
+.B  -A3
+use A3 paper (default A4)
+.TP
+.B  -x<width>
+independent paper width in points
+.TP
+.B  -y<height>
+independent paper height in points
+.TP
+.B  -2
+format in 2 columns
+.TP
+.B  -L
+landscape mode
+
+.P
+Note that where one variable is implied by two options, the second option
+takes precedence for that variable. (e.g. -A4 -y500).
+
+In 
+.B landscape 
+mode, page width and height are simply swapped over before
+formatting, no matter how or when they were defined.
+
+.SH BUGS
+
+Backspace character is not processed, so the result of
+.ce
+.B "nroff -man man.1 | text2pdf > man.pdf"
+has not a very nice touch.
+
+.SH AUTHOR
+text2pdf v1.1 (c) Phil Smith, 1996., <pns@cs.nott.ac.uk>
+
+This software can be find at URL:
+.ce
+http://www.ep.cs.nott.ac.uk/~pns/pdfcorner/text2pdf/
+
+.SH NOTE
+Cette page de man est faite par Bertrand Decouty, fvrier 1997.
